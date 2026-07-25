@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kek Seringgit Jalan Pegawai | Jadual Mini Tour & Tempahan</title>
+    <title>Kek Seringgit Jalan Pegawai</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -68,7 +68,7 @@
                 <a href="#tour" class="text-pinksoft-600 font-semibold hover:text-pinksoft-700 transition-colors flex items-center gap-1">
                     <i class="fa-solid fa-van-shuttle text-xs"></i> Jadual Tour
                 </a>
-                <a href="#katalog" class="hover:text-pinksoft-600 transition-colors">Katalog Kek</a>
+                <a href="#katalog" class="hover:text-pinksoft-600 transition-colors">Menu Kek</a>
                 <a href="#tempah" class="hover:text-pinksoft-600 transition-colors">Tempah Pantas</a>
             </nav>
 
@@ -117,7 +117,7 @@
                         🚚 Track Vendor Kami
                     </span>
                     <h3 class="text-2xl md:text-4xl font-bold text-gray-900 mt-2">Jadual Mini Tour Harian</h3>
-                    <p class="text-gray-500 text-sm md:text-base mt-1">Kami singgah di spot-spot popular sekitar Jalan Pegawai & kawasan sekitarnya!</p>
+                    <p class="text-gray-500 text-sm md:text-base mt-1">Kami tour di spot-spot popular sekitar Kedah & kawasan sekitarnya!</p>
                 </div>
 
                 <!-- Live Location Highlight Card -->
@@ -132,7 +132,7 @@
                                 <span class="bg-green-500/30 text-green-100 border border-green-300/40 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">
                                     Lokasi Semasa (LIVE - 25/7)
                                 </span>
-                                <h4 class="text-xl md:text-2xl font-bold mt-1" id="liveLocationTitle">Kola Ketil</h4>
+                                <h4 class="text-xl md:text-2xl font-bold mt-1" id="liveLocationTitle">Kuala Ketil</h4>
                                 <p class="text-pinksoft-100 text-xs md:text-sm mt-0.5">
                                     <i class="fa-regular fa-clock mr-1"></i> Masa: <span id="liveTime">4:30 PM - 8:30 PM</span>
                                 </p>
@@ -251,74 +251,20 @@
                                 + Pilih
                             </span>
                         </div>
+
+                        <button type="button" onclick="submitToWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg transition-all text-base flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Hantar Tempahan Ke WhatsApp
+                        </button><button type="button" onclick="submitToWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg transition-all text-base flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Hantar Tempahan Ke WhatsApp
+                        </button>
+                        
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: KALKULATOR & TEMPAHAN WHATSAPP -->
-        <section id="tempah" class="py-12 bg-white">
-            <div class="max-w-3xl mx-auto px-4">
-                <div class="bg-pinksoft-50 border-2 border-pinksoft-200 rounded-3xl p-6 md:p-8 shadow-lg">
-                    
-                    <div class="text-center mb-6">
-                        <h3 class="text-2xl font-bold text-gray-900">Kalkulator & Tempahan Direct WhatsApp</h3>
-                        <p class="text-xs md:text-sm text-gray-600 mt-1">Pilih perasa, kuantiti, dan tentukan lokasi pengambilan Tour anda!</p>
-                    </div>
-
-                    <form id="calculatorForm" class="space-y-4">
+        
                         
-                        <!-- Nama -->
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Pemesan:</label>
-                            <input type="text" id="custName" placeholder="Contoh: Puan Maria" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm">
-                        </div>
-
-                        <!-- Perasa Selection -->
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pilihan Perasa Kek:</label>
-                            <select id="custCake" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm bg-white">
-                                <option value="Coklat Moist Super">Coklat Moist Super</option>
-                                <option value="Pandan Cheese Leleh">Pandan Cheese Leleh</option>
-                                <option value="Red Velvet Cream">Red Velvet Cream</option>
-                                <option value="Butter Vanilla">Butter Vanilla</option>
-                                <option value="Campur (Mix All Flavors)">Campur Semua Perasa (Mix)</option>
-                            </select>
-                        </div>
-
-                        <!-- Lokasi Ambil (Linked to Mini Tour) -->
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Lokasi Pengambilan (Pick-up Spot):</label>
-                            <select id="custLocation" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm bg-white">
-                                <option value="Kola Ketil (25/7/2026)">Kola Ketil (25/7/2026 - Hari Ini 🔥)</option>
-                                <option value="Taman Mutiara Sg Kob (26/7/2026)">Taman Mutiara Sg Kob (26/7/2026)</option>
-                                <option value="Pasar Malam Bukit Besar (27/7/2026)">Pasar Malam Bukit Besar (27/7/2026)</option>
-                                <option value="Felda Teloi Timur (28/7/2026)">Felda Teloi Timur (28/7/2026)</option>
-                                <option value="Padang Serai (24/7/2026)">Padang Serai (24/7/2026)</option>
-                            </select>
-                        </div>
-
-                        <!-- Quantity Counter -->
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Kuantiti (Biji / Potong):</label>
-                            <div class="flex items-center gap-3">
-                                <button type="button" onclick="adjustQty(-1)" class="w-10 h-10 rounded-xl bg-pinksoft-200 text-pinksoft-800 font-bold text-lg hover:bg-pinksoft-300 flex items-center justify-center">-</button>
-                                <input type="number" id="custQty" value="10" min="1" max="500" oninput="updateTotal()" class="w-24 text-center py-2.5 border border-gray-200 rounded-xl font-bold text-lg focus:outline-none">
-                                <button type="button" onclick="adjustQty(1)" class="w-10 h-10 rounded-xl bg-pinksoft-200 text-pinksoft-800 font-bold text-lg hover:bg-pinksoft-300 flex items-center justify-center">+</button>
-                                <span class="text-xs text-gray-500">(RM 1.00 / potong)</span>
-                            </div>
-                        </div>
-
-                        <!-- Price Calculation Box -->
-                        <div class="bg-white rounded-2xl p-4 text-center border border-pinksoft-200 my-4">
-                            <span class="text-xs text-gray-500 uppercase font-semibold">Anggaran Jumlah Bayaran</span>
-                            <div class="text-3xl font-extrabold text-pinksoft-600 mt-0.5" id="totalPriceDisplay">RM 10.00</div>
-                        </div>
-
-                        <!-- WhatsApp Action Button -->
-                        <button type="button" onclick="submitToWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg transition-all text-base flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-xl"></i> Hantar Tempahan Ke WhatsApp
-                        </button>
 
                     </form>
                 </div>
