@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kek Seringgit Jalan Pegawai | Jadual Mini Tour & Tempahan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pinksoft: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+        }
+        .pulse-live {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse-green 1.8s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+    </style>
+</head>
+<body class="bg-pinksoft-50 text-gray-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 custom-glass border-b border-pinksoft-200 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-2">
+                <span class="text-2xl">🍰</span>
+                <div>
+                    <h1 class="font-bold text-pinksoft-700 text-lg leading-tight">Kek Seringgit</h1>
+                    <p class="text-xs text-gray-500 font-medium">Jalan Pegawai</p>
+                </div>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium">
+                <a href="#home" class="hover:text-pinksoft-600 transition-colors">Utama</a>
+                <a href="#tour" class="text-pinksoft-600 font-semibold hover:text-pinksoft-700 transition-colors flex items-center gap-1">
+                    <i class="fa-solid fa-van-shuttle text-xs"></i> Jadual Tour
+                </a>
+                <a href="#katalog" class="hover:text-pinksoft-600 transition-colors">Katalog Kek</a>
+                <a href="#tempah" class="hover:text-pinksoft-600 transition-colors">Tempah Pantas</a>
+            </nav>
+
+            <a href="#tempah" class="bg-pinksoft-500 hover:bg-pinksoft-600 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-full shadow-md transition-all transform hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-base mr-1"></i> Tempah Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="flex-grow">
+        
+        <!-- HERO SECTION -->
+        <section id="home" class="relative overflow-hidden bg-gradient-to-b from-pinksoft-100 to-pinksoft-50 pt-8 pb-12 md:py-16">
+            <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+                <div class="inline-flex items-center gap-2 bg-pinksoft-200 text-pinksoft-800 px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold mb-4 animate-bounce">
+                    <span>✨ Kek Gebu & Sedap RM1.00 Sahaja!</span>
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                    Kek Seringgit <span class="text-pinksoft-600">Jalan Pegawai</span>
+                </h2>
+                
+                <p class="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+                    Dibakar segar setiap hari! Kini kami bawakan **Mini Tour Harian** — vendor bergerak bawa kek feveret anda terus ke kawasan perumahan & sekolah terdekat!
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
+                    <a href="#tour" class="bg-pinksoft-500 hover:bg-pinksoft-600 text-white font-bold py-3 px-6 rounded-2xl shadow-lg hover:shadow-pinksoft-300/50 transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-map-location-dot"></i> Check Jadual Tour Hari Ini
+                    </a>
+                    <a href="#katalog" class="bg-white hover:bg-pinksoft-100 text-pinksoft-700 border border-pinksoft-300 font-bold py-3 px-6 rounded-2xl transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-utensils"></i> Lihat Menu Kek
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: JADUAL MINI TOUR HARIAN (NEW PAGE / FEATURE) -->
+        <section id="tour" class="py-12 bg-white">
+            <div class="max-w-6xl mx-auto px-4">
+                
+                <!-- Section Title -->
+                <div class="text-center mb-8">
+                    <span class="bg-pinksoft-100 text-pinksoft-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        🚚 Track Vendor Kami
+                    </span>
+                    <h3 class="text-2xl md:text-4xl font-bold text-gray-900 mt-2">Jadual Mini Tour Harian</h3>
+                    <p class="text-gray-500 text-sm md:text-base mt-1">Kami singgah di spot-spot popular sekitar Jalan Pegawai & kawasan sekitarnya!</p>
+                </div>
+
+                <!-- Live Location Highlight Card -->
+                <div class="bg-gradient-to-r from-pinksoft-500 to-pinksoft-600 text-white rounded-3xl p-6 shadow-xl mb-10 relative overflow-hidden">
+                    <div class="absolute -right-6 -bottom-6 text-pinksoft-400 opacity-20 text-9xl">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div class="flex items-center gap-4">
+                            <span class="w-4 h-4 rounded-full bg-green-400 pulse-live flex-shrink-0"></span>
+                            <div>
+                                <span class="bg-green-500/30 text-green-100 border border-green-300/40 text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">
+                                    Lokasi Semasa (LIVE - 25/7)
+                                </span>
+                                <h4 class="text-xl md:text-2xl font-bold mt-1" id="liveLocationTitle">Kola Ketil</h4>
+                                <p class="text-pinksoft-100 text-xs md:text-sm mt-0.5">
+                                    <i class="fa-regular fa-clock mr-1"></i> Masa: <span id="liveTime">4:30 PM - 8:30 PM</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 w-full md:w-auto justify-end">
+                            <button onclick="openMaps()" class="bg-white text-pinksoft-700 hover:bg-pinksoft-50 font-bold px-4 py-2.5 rounded-xl text-xs md:text-sm shadow flex items-center gap-2 transition-all">
+                                <i class="fa-solid fa-location-arrow text-pinksoft-500"></i> Buka Google Maps
+                            </button>
+                            <button onclick="requestStopModal()" class="bg-pinksoft-700 hover:bg-pinksoft-800 text-white font-bold px-4 py-2.5 rounded-xl text-xs md:text-sm shadow flex items-center gap-2 transition-all">
+                                <i class="fa-solid fa-bullhorn"></i> Minta Singgah Tempat Saya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Day Filter Tabs -->
+                <div class="flex overflow-x-auto space-x-2 pb-4 mb-6 border-b border-gray-100 no-scrollbar justify-start md:justify-center">
+                    <button onclick="switchDay('24/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
+                        24/7 Padang Serai
+                    </button>
+                    <button onclick="switchDay('25/7')" class="day-tab active px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-500 text-white shadow-md">
+                        25/7 Kola Ketil 🔥
+                    </button>
+                    <button onclick="switchDay('26/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
+                        26/7 Sg Kob
+                    </button>
+                    <button onclick="switchDay('27/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
+                        27/7 Bukit Besar
+                    </button>
+                    <button onclick="switchDay('28/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
+                        28/7 Teloi Timur
+                    </button>
+                </div>
+
+                <!-- Schedule Timeline Container -->
+                <div id="scheduleTimeline" class="space-y-4 max-w-4xl mx-auto">
+                    <!-- Dynamic Schedule Items Injected by JS -->
+                </div>
+
+                <!-- Info Note -->
+                <div class="mt-8 bg-pinksoft-50 border border-pinksoft-200 rounded-2xl p-4 text-center text-xs md:text-sm text-pinksoft-800">
+                    <p><i class="fa-solid fa-circle-info mr-1 text-pinksoft-500"></i> **Nota Tour:** Masa boleh berubah 10-15 minit mengikut keadaan lalu lintas & cuaca. Sila semak status *Live* sebelum ke lokasi!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION: KATALOG KEK -->
+        <section id="katalog" class="py-12 bg-pinksoft-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-10">
+                    <span class="bg-pinksoft-200 text-pinksoft-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                        🎂 Aneka Rasa
+                    </span>
+                    <h3 class="text-2xl md:text-4xl font-bold text-gray-900 mt-2">Menu Kek RM1.00</h3>
+                    <p class="text-gray-500 text-sm mt-1">Tekan pada kek pilihan anda untuk tambah terus ke dalam borang tempahan!</p>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <!-- Cake Card 1 -->
+                    <div onclick="selectCake('Coklat Moist Super')" class="bg-white rounded-3xl p-5 shadow-sm border border-pinksoft-100 hover:border-pinksoft-400 hover:shadow-xl transition-all cursor-pointer group text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-5xl my-3 group-hover:scale-110 transition-transform">🍫</div>
+                            <h4 class="font-bold text-gray-800 text-base">Coklat Moist</h4>
+                            <p class="text-xs text-gray-500 mt-1">Limpahan topping coklat pekat.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-pinksoft-600 font-extrabold text-lg">RM 1.00</span>
+                            <span class="bg-pinksoft-100 text-pinksoft-700 text-xs px-2.5 py-1 rounded-lg group-hover:bg-pinksoft-500 group-hover:text-white transition-colors">
+                                + Pilih
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cake Card 2 -->
+                    <div onclick="selectCake('Pandan Cheese Leleh')" class="bg-white rounded-3xl p-5 shadow-sm border border-pinksoft-100 hover:border-pinksoft-400 hover:shadow-xl transition-all cursor-pointer group text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-5xl my-3 group-hover:scale-110 transition-transform">🍃</div>
+                            <h4 class="font-bold text-gray-800 text-base">Pandan</h4>
+                            <p class="text-xs text-gray-500 mt-1">Aroma pandan yang wangi.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-pinksoft-600 font-extrabold text-lg">RM 1.00</span>
+                            <span class="bg-pinksoft-100 text-pinksoft-700 text-xs px-2.5 py-1 rounded-lg group-hover:bg-pinksoft-500 group-hover:text-white transition-colors">
+                                + Pilih
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cake Card 3 -->
+                    <div onclick="selectCake('Red Velvet Cream')" class="bg-white rounded-3xl p-5 shadow-sm border border-pinksoft-100 hover:border-pinksoft-400 hover:shadow-xl transition-all cursor-pointer group text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-5xl my-3 group-hover:scale-110 transition-transform">🍓</div>
+                            <h4 class="font-bold text-gray-800 text-base">Red Velvet</h4>
+                            <p class="text-xs text-gray-500 mt-1">Lapis cream cheese mewah & gebu.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-pinksoft-600 font-extrabold text-lg">RM 1.00</span>
+                            <span class="bg-pinksoft-100 text-pinksoft-700 text-xs px-2.5 py-1 rounded-lg group-hover:bg-pinksoft-500 group-hover:text-white transition-colors">
+                                + Pilih
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Cake Card 4 -->
+                    <div onclick="selectCake('Butter Vanilla')" class="bg-white rounded-3xl p-5 shadow-sm border border-pinksoft-100 hover:border-pinksoft-400 hover:shadow-xl transition-all cursor-pointer group text-center flex flex-col justify-between">
+                        <div>
+                            <div class="text-5xl my-3 group-hover:scale-110 transition-transform">🧈</div>
+                            <h4 class="font-bold text-gray-800 text-base">Oreo</h4>
+                            <p class="text-xs text-gray-500 mt-1">Rasa klasik beraroma mentega asli.</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-pinksoft-600 font-extrabold text-lg">RM 1.00</span>
+                            <span class="bg-pinksoft-100 text-pinksoft-700 text-xs px-2.5 py-1 rounded-lg group-hover:bg-pinksoft-500 group-hover:text-white transition-colors">
+                                + Pilih
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: KALKULATOR & TEMPAHAN WHATSAPP -->
+        <section id="tempah" class="py-12 bg-white">
+            <div class="max-w-3xl mx-auto px-4">
+                <div class="bg-pinksoft-50 border-2 border-pinksoft-200 rounded-3xl p-6 md:p-8 shadow-lg">
+                    
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900">Kalkulator & Tempahan Direct WhatsApp</h3>
+                        <p class="text-xs md:text-sm text-gray-600 mt-1">Pilih perasa, kuantiti, dan tentukan lokasi pengambilan Tour anda!</p>
+                    </div>
+
+                    <form id="calculatorForm" class="space-y-4">
+                        
+                        <!-- Nama -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Nama Pemesan:</label>
+                            <input type="text" id="custName" placeholder="Contoh: Puan Maria" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm">
+                        </div>
+
+                        <!-- Perasa Selection -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pilihan Perasa Kek:</label>
+                            <select id="custCake" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm bg-white">
+                                <option value="Coklat Moist Super">Coklat Moist Super</option>
+                                <option value="Pandan Cheese Leleh">Pandan Cheese Leleh</option>
+                                <option value="Red Velvet Cream">Red Velvet Cream</option>
+                                <option value="Butter Vanilla">Butter Vanilla</option>
+                                <option value="Campur (Mix All Flavors)">Campur Semua Perasa (Mix)</option>
+                            </select>
+                        </div>
+
+                        <!-- Lokasi Ambil (Linked to Mini Tour) -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Lokasi Pengambilan (Pick-up Spot):</label>
+                            <select id="custLocation" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm bg-white">
+                                <option value="Kola Ketil (25/7/2026)">Kola Ketil (25/7/2026 - Hari Ini 🔥)</option>
+                                <option value="Taman Mutiara Sg Kob (26/7/2026)">Taman Mutiara Sg Kob (26/7/2026)</option>
+                                <option value="Pasar Malam Bukit Besar (27/7/2026)">Pasar Malam Bukit Besar (27/7/2026)</option>
+                                <option value="Felda Teloi Timur (28/7/2026)">Felda Teloi Timur (28/7/2026)</option>
+                                <option value="Padang Serai (24/7/2026)">Padang Serai (24/7/2026)</option>
+                            </select>
+                        </div>
+
+                        <!-- Quantity Counter -->
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Kuantiti (Biji / Potong):</label>
+                            <div class="flex items-center gap-3">
+                                <button type="button" onclick="adjustQty(-1)" class="w-10 h-10 rounded-xl bg-pinksoft-200 text-pinksoft-800 font-bold text-lg hover:bg-pinksoft-300 flex items-center justify-center">-</button>
+                                <input type="number" id="custQty" value="10" min="1" max="500" oninput="updateTotal()" class="w-24 text-center py-2.5 border border-gray-200 rounded-xl font-bold text-lg focus:outline-none">
+                                <button type="button" onclick="adjustQty(1)" class="w-10 h-10 rounded-xl bg-pinksoft-200 text-pinksoft-800 font-bold text-lg hover:bg-pinksoft-300 flex items-center justify-center">+</button>
+                                <span class="text-xs text-gray-500">(RM 1.00 / potong)</span>
+                            </div>
+                        </div>
+
+                        <!-- Price Calculation Box -->
+                        <div class="bg-white rounded-2xl p-4 text-center border border-pinksoft-200 my-4">
+                            <span class="text-xs text-gray-500 uppercase font-semibold">Anggaran Jumlah Bayaran</span>
+                            <div class="text-3xl font-extrabold text-pinksoft-600 mt-0.5" id="totalPriceDisplay">RM 10.00</div>
+                        </div>
+
+                        <!-- WhatsApp Action Button -->
+                        <button type="button" onclick="submitToWhatsApp()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3.5 px-4 rounded-2xl shadow-lg transition-all text-base flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl"></i> Hantar Tempahan Ke WhatsApp
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-4">
+            <div class="flex justify-center items-center gap-2 text-xl font-bold text-pinksoft-300">
+                <span>🍰 Kek Seringgit Jalan Pegawai</span>
+            </div>
+            <p class="text-xs text-gray-400 max-w-md mx-auto">
+                Membawa kemanisan segar dengan harga paling jimat terus ke kawasan anda setiap hari!
+            </p>
+            <div class="flex justify-center space-x-4 text-gray-400 text-sm pt-2">
+                <a href="#home" class="hover:text-pinksoft-300">Utama</a>
+                <span>•</span>
+                <a href="#tour" class="hover:text-pinksoft-300">Jadual Tour</a>
+                <span>•</span>
+                <a href="#katalog" class="hover:text-pinksoft-300">Menu Kek</a>
+            </div>
+            <div class="text-xs text-gray-500 pt-4 border-t border-gray-800">
+                © 2026 Kek Seringgit Jalan Pegawai. Hak Cipta Terelihara.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Database Jadual Mini Tour Harian
+        const scheduleData = {
+            "24/7": [
+                { time: "04:30 PM - 08:30 PM", location: "Padang Serai", status: "Selesai (24/7)", icon: "fa-circle-check", badge: "bg-gray-200 text-gray-600" }
+            ],
+            "25/7": [
+                { time: "04:30 PM - 08:30 PM", location: "Kola Ketil (Kuala Ketil)", status: "Live Hari Ini (25/7)", icon: "fa-truck-fast", badge: "bg-green-500 text-white animate-pulse" }
+            ],
+            "26/7": [
+                { time: "04:30 PM - 08:30 PM", location: "Taman Mutiara Sg Kob", status: "Akan Datang (26/7)", icon: "fa-map-pin", badge: "bg-pinksoft-100 text-pinksoft-700" }
+            ],
+            "27/7": [
+                { time: "04:00 PM - 08:00 PM", location: "Pasar Malam Bukit Besar", status: "Akan Datang (27/7)", icon: "fa-store", badge: "bg-pinksoft-100 text-pinksoft-700" }
+            ],
+            "28/7": [
+                { time: "04:30 PM - 08:30 PM", location: "Felda Teloi Timur", status: "Akan Datang (28/7)", icon: "fa-tree", badge: "bg-pinksoft-100 text-pinksoft-700" }
+            ]
+        };
+
+        // Render Schedule Items based on selected day
+        function switchDay(day) {
+            // Update Active Tab Button styling
+            const tabs = document.querySelectorAll('.day-tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-pinksoft-500', 'text-white', 'shadow-md');
+                tab.classList.add('bg-pinksoft-100', 'text-pinksoft-700');
+            });
+
+            event.currentTarget.classList.remove('bg-pinksoft-100', 'text-pinksoft-700');
+            event.currentTarget.classList.add('bg-pinksoft-500', 'text-white', 'shadow-md');
+
+            const timelineContainer = document.getElementById('scheduleTimeline');
+            const data = scheduleData[day] || [];
+
+            if(data.length === 0) {
+                timelineContainer.innerHTML = `<p class="text-center text-gray-500 text-sm py-4">Tiada jadual mini tour untuk hari ini.</p>`;
+                return;
+            }
+
+            let html = '';
+            data.forEach((item, index) => {
+                html += `
+                    <div class="bg-pinksoft-50/50 border border-pinksoft-100 rounded-2xl p-4 md:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all hover:bg-pinksoft-100/50">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-pinksoft-200 text-pinksoft-700 flex items-center justify-center text-xl font-bold flex-shrink-0">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-xs font-bold ${item.badge} px-2.5 py-0.5 rounded-full uppercase">
+                                        ${item.status}
+                                    </span>
+                                    <span class="text-xs text-gray-500 font-medium">
+                                        <i class="fa-regular fa-clock"></i> ${item.time}
+                                    </span>
+                                </div>
+                                <h5 class="text-base font-bold text-gray-900 mt-1">${item.location}</h5>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                            <button onclick="setPickupLocation('${item.location}')" class="text-xs bg-white border border-pinksoft-300 text-pinksoft-700 hover:bg-pinksoft-500 hover:text-white font-bold px-3 py-2 rounded-xl transition-all w-full sm:w-auto text-center">
+                                Pick-up Sini
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            timelineContainer.innerHTML = html;
+        }
+
+        // Initialize default view (25/7 Kola Ketil)
+        window.addEventListener('DOMContentLoaded', () => {
+            switchDay('25/7');
+            updateTotal();
+        });
+
+        // Function to handle quantity adjustments
+        function adjustQty(amount) {
+            const qtyInput = document.getElementById('custQty');
+            let current = parseInt(qtyInput.value) || 1;
+            current += amount;
+            if(current < 1) current = 1;
+            qtyInput.value = current;
+            updateTotal();
+        }
+
+        // Calculate total price
+        function updateTotal() {
+            const qtyInput = document.getElementById('custQty');
+            let qty = parseInt(qtyInput.value) || 1;
+            if(qty < 1) qty = 1;
+            const price = qty * 1.00;
+            document.getElementById('totalPriceDisplay').innerText = `RM ${price.toFixed(2)}`;
+        }
+
+        // Select Cake from Catalog Cards
+        function selectCake(cakeName) {
+            const cakeSelect = document.getElementById('custCake');
+            cakeSelect.value = cakeName;
+            
+            // Scroll smoothly to ordering form
+            document.getElementById('tempah').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Set Pickup location from schedule
+        function setPickupLocation(loc) {
+            const locSelect = document.getElementById('custLocation');
+            
+            // Add option dynamically if not present
+            let exists = false;
+            for(let i=0; i < locSelect.options.length; i++) {
+                if(locSelect.options[i].value.includes(loc.split('(')[0].trim())) {
+                    locSelect.selectedIndex = i;
+                    exists = true;
+                    break;
+                }
+            }
+            if(!exists) {
+                const opt = document.createElement('option');
+                opt.value = loc;
+                opt.innerHTML = loc;
+                locSelect.appendChild(opt);
+                locSelect.value = loc;
+            }
+
+            document.getElementById('tempah').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Submit order via WhatsApp
+        function submitToWhatsApp() {
+            const name = document.getElementById('custName').value.trim();
+            const cake = document.getElementById('custCake').value;
+            const location = document.getElementById('custLocation').value;
+            const qty = document.getElementById('custQty').value;
+            const total = (parseInt(qty) * 1.00).toFixed(2);
+
+            if(!name) {
+                alert("Sila masukkan nama anda terlebih dahulu!");
+                return;
+            }
+
+            const phone = "60123456789"; // Ganti dengan nombor telefon penjual
+            const text = `Salam, saya nak tempah Kek Seringgit (Mini Tour)!%0A%0A` +
+                         `👤 *Nama:* ${encodeURIComponent(name)}%0A` +
+                         `🍰 *Perasa:* ${encodeURIComponent(cake)}%0A` +
+                         `📍 *Lokasi Pick-up:* ${encodeURIComponent(location)}%0A` +
+                         `🔢 *Kuantiti:* ${qty} potong%0A` +
+                         `💰 *Jumlah:* RM ${total}%0A%0A` +
+                         `Terima kasih!`;
+
+            window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+        }
+
+        // Helper functions
+        function openMaps() {
+            window.open('https://maps.google.com/?q=Jalan+Pegawai', '_blank');
+        }
+
+        function requestStopModal() {
+            const name = prompt("Sila masukkan nama & lokasi/kawasan perumahan anda yang ingin dilawati:");
+            if(name) {
+                const phone = "60123456789";
+                const msg = `Salam Kek Seringgit! Saya nak cadangkan perhentian Mini Tour di kawasan saya:%0A%0A📍 *Cadangan Lokasi:* ${encodeURIComponent(name)}`;
+                window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+            }
+        }
+    </script>
+
+</body>
+</html>
