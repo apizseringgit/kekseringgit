@@ -140,7 +140,7 @@
                                 <span class="bg-green-500 text-white font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider animate-bounce inline-flex items-center gap-1.5 shadow-md">
                                     <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> 🔴 MASUK LIVE SEKARANG
                                 </span>
-                                <h4 class="text-xl md:text-2xl font-bold mt-1" id="liveLocationTitle">Kuala Ketil</h4>
+                                <h4 class="text-xl md:text-2xl font-bold mt-1" id="liveLocationTitle">Taman Muriara Sungai Kob</h4>
                                 <p class="text-pinksoft-100 text-xs md:text-sm mt-0.5">
                                     <i class="fa-regular fa-clock mr-1"></i> Masa: <span id="liveTime">4:30 PM - 8:30 PM</span>
                                 </p>
@@ -163,13 +163,13 @@
                 <!-- Interactive Day Filter Tabs -->
                 <div class="flex overflow-x-auto space-x-2 pb-4 mb-6 border-b border-gray-100 no-scrollbar justify-start md:justify-center">
                     <button onclick="switchDay('24/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
-                        24/7 Padang Serai
+                        24 Julai - Padang Serai
                     </button>
                     <button onclick="switchDay('25/7')" class="day-tab active px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-500 text-white shadow-md">
-                        25/7 Kuala Ketil 🔥
+                        25/7 Kuala Ketil 
                     </button>
                     <button onclick="switchDay('26/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
-                        26/7 Sungai Kob
+                        26/7 Sungai Kob 🔥
                     </button>
                     <button onclick="switchDay('27/7')" class="day-tab px-5 py-2.5 rounded-2xl text-xs md:text-sm font-semibold whitespace-nowrap transition-all bg-pinksoft-100 text-pinksoft-700 hover:bg-pinksoft-200">
                         27/7 Bukit Besar
@@ -280,7 +280,7 @@
                         Tempahan Pakej Dessert Table
                     </h3>
                     <p class="text-gray-600 text-sm md:text-base mt-3 max-w-2xl mx-auto leading-relaxed">
-                        Serikan majlis anda dengan susunan Dessert Table Kek Seringgit! Pilihan bajet paling fleksibel mengikut saiz majlis seperti **hari lahir, kenduri perkahwinan, jamuan sekolah, majlis kesyukuran, mahupun acara pejabat.
+                        Serikan majlis anda dengan susunan Dessert Table Kek Seringgit! Pilihan bajet paling fleksibel mengikut saiz majlis seperti hari lahir, kenduri perkahwinan, jamuan sekolah, majlis kesyukuran, mahupun acara pejabat.
                     </p>
                 </div>
 
@@ -290,7 +290,7 @@
                         <div class="text-3xl mb-1">🍰</div>
                         <span class="bg-pinksoft-200 text-pinksoft-800 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Basic Set</span>
                         <h5 class="font-extrabold text-xl text-pinksoft-700 mt-1">RM 150</h5>
-                        <p class="text-xs text-gray-600 font-semibold mt-1">~150 pcs Kek</p>
+                        <p class="text-xs text-gray-600 font-semibold mt-1"></p>
                         <p class="text-[11px] text-gray-500 mt-1">Sesuai majlis kecil & party mini</p>
                     </div>
 
@@ -340,10 +340,10 @@
                             <div>
                                 <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Pilihan Pakej Dessert Table:</label>
                                 <select id="pkgType" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm bg-white font-semibold text-pinksoft-700">
-                                    <option value="Pakej Dessert Table RM150 (~150 pcs)">Pakej RM 150 </option>
-                                    <option value="Pakej Dessert Table RM250 (~250 pcs)">Pakej RM 250 </option>
-                                    <option value="Pakej Dessert Table RM350 (~350 pcs)">Pakej RM 350 </option>
-                                    <option value="Pakej Custom / Bajet Sendiri">Pakej Custom / Bajet Sendiri (Sila Nyatakan)</option>
+                                    <option value="Pakej RM150">Pakej RM 150 </option>
+                                    <option value="Pakej RM250">Pakej RM 250 </option>
+                                    <option value="Pakej RM350">Pakej RM 350 </option>
+                                    <option value="Pakej Custom">Pakej Custom (Nyatakan)</option>
                                 </select>
                             </div>
                         </div>
@@ -357,7 +357,7 @@
                                     <option value="Kenduri Perkahwinan / Akika / Doa Selamat">Kenduri / Aqiqah / Doa Selamat</option>
                                     <option value="Jamuan Sekolah / Tadika">Jamuan Sekolah / Tadika</option>
                                     <option value="Acara Pejabat / Mesyuarat">Acara Pejabat / Mesyuarat</option>
-                                    <option value="Lain-lain Majlis">Lain-lain Majlis</option>
+                                    <option value="Lain-lain Majlis">Lain-lain Majlis (Nyatakan)</option>
                                 </select>
                             </div>
 
@@ -368,6 +368,8 @@
                             </div>
                         </div>
 
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
                          <div>
                                 <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Masa Majlis:</label>
                                 <input type="time" id="eventTime" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-pinksoft-400 focus:outline-none text-sm bg-white">
@@ -448,10 +450,10 @@
                 { time: "04:30 PM - 08:30 PM", location: "Padang Serai", status: "Selesai (24/7)", icon: "fa-circle-check", badge: "bg-gray-200 text-gray-600" }
             ],
             "25/7": [
-                { time: "04:30 PM - 08:30 PM", location: "Kola Ketil (Kuala Ketil)", status: "🔴 MASUK LIVE SEKARANG", icon: "fa-truck-fast", badge: "bg-green-500 text-white animate-pulse" }
+                { time: "04:30 PM - 08:30 PM", location: "Kola Ketil (Kuala Ketil)", status: "Selesai (25/7)", icon: "fa-truck-fast", badge: "bg-green-500 text-white animate-pulse" }
             ],
             "26/7": [
-                { time: "04:30 PM - 08:30 PM", location: "Taman Mutiara Sg Kob", status: "Akan Datang (26/7)", icon: "fa-map-pin", badge: "bg-pinksoft-100 text-pinksoft-700" }
+                { time: "04:30 PM - 08:30 PM", location: "Taman Mutiara Sg Kob", status: "🔴 MASUK LIVE SEKARANG", icon: "fa-map-pin", badge: "bg-pinksoft-100 text-pinksoft-700" }
             ],
             "27/7": [
                 { time: "04:30 PM - 08:30 PM", location: "Pasar Malam Bukit Besar", status: "Akan Datang (27/7)", icon: "fa-store", badge: "bg-pinksoft-100 text-pinksoft-700" }
@@ -592,7 +594,7 @@
             const name = prompt("Sila masukkan nama & lokasi/kawasan perumahan anda yang ingin dilawati:");
             if(name) {
                 const phone = "60123456789";
-                const msg = `Salam Kek Seringgit! Saya nak cadangkan perhentian Mini Tour di kawasan saya:%0A%0A📍 *Cadangan Lokasi:* ${encodeURIComponent(name)}`;
+                const msg = `Salam Kek Seringgit! Saya nak cadangkan Mini Tour di kawasan saya:%0A%0A📍 *Cadangan Lokasi:* ${encodeURIComponent(name)}`;
                 window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
             }
         }
